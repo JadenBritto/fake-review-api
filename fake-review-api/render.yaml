@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: fake-review-detector-api
+    env: docker
+    region: oregon
+    plan: free
+    branch: main
+    healthCheckPath: /health
+    envVars:
+      - key: PORT
+        value: 8000
+      - key: PYTHON_VERSION
+        value: 3.10.0
